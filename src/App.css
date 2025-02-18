@@ -1,0 +1,142 @@
+/* Общий стиль для страницы */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Контейнер для списка товаров */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Карточка товара */
+.product-card {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Название товара */
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card h3 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.product-card h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Рейтинг товара */
+.product-card .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-card .rating span {
+  color: orange;
+  font-size: 20px;
+  margin-right: 2px;
+}
+.product-detail {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Изображение товара */
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Заголовок товара */
+.product-detail h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Цена и описание */
+.product-detail p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Рейтинг */
+.product-detail .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.product-detail .rating span {
+  font-size: 20px;
+  color: orange;
+  margin-right: 2px;
+}
+
+/* Кнопка "Назад" */
+.product-detail button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-detail button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+  }
+}
